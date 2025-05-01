@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juliana Costa - Estratégia e Soluções Digitais</title> <script src="https://cdn.tailwindcss.com"></script>
+    <title>Juliana Costa - Soluções Digitais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Adiciona a fonte Inter */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth; /* Adiciona scroll suave */
+            scroll-behavior: smooth;
+            overflow-x: hidden;
         }
-        /* Ajustes visuais */
+        /* Ajustes visuais gerais */
         .section-card {
-            @apply bg-white p-6 md:p-10 rounded-lg shadow-lg mb-10 transition-shadow duration-300 hover:shadow-xl;
+            @apply bg-white p-6 md:p-10 lg:p-12 rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl;
         }
         .testimonial-card {
             @apply bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm;
@@ -25,13 +27,18 @@
         .divider {
             @apply border-t border-gray-200 my-8;
         }
+        /* Classe para esconder/mostrar menu mobile */
+        .mobile-menu-hidden {
+            @apply hidden;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-b from-blue-50 via-gray-50 to-purple-50 text-gray-800">
 
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-700 hover:text-blue-800 transition-colors">Juliana Costa</a>
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl md:text-2xl font-bold text-blue-700 hover:text-blue-800 transition-colors">Juliana Costa - Soluções Digitais</a>
+
             <div class="hidden md:flex items-center space-x-6">
                 <a href="#sobre" class="text-gray-600 hover:text-blue-700 font-medium">Sobre</a>
                 <a href="#servicos" class="text-gray-600 hover:text-blue-700 font-medium">Soluções</a>
@@ -39,47 +46,53 @@
                 <a href="#depoimentos" class="text-gray-600 hover:text-blue-700 font-medium">Depoimentos</a>
                 <a href="#contato" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition duration-300 text-sm font-semibold shadow-sm">Entrar em Contato</a>
             </div>
+
             <div class="md:hidden">
-                <button class="text-gray-600 focus:outline-none">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none p-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
-                </div>
+            </div>
         </nav>
+        <div id="mobile-menu" class="md:hidden mobile-menu-hidden bg-white border-t border-gray-200">
+            <a href="#sobre" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Sobre</a>
+            <a href="#servicos" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Soluções</a>
+            <a href="#projetos" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Projetos</a>
+            <a href="#depoimentos" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Depoimentos</a>
+            <a href="#contato" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Contato</a>
+        </div>
     </header>
 
-    <main class="container mx-auto px-6 py-16 md:py-24">
+    <main class="container mx-auto px-4 sm:px-6 py-12 md:py-20">
 
-        <section id="hero" class="text-center mb-20 md:mb-32 pt-10">
+        <section id="hero" class="text-center pt-8 md:pt-12 mb-16 md:mb-20">
              <img src="https://placehold.co/150x150/A0AEC0/FFFFFF?text=JC"
-                 alt="[Imagem de Juliana Costa]"
-                 class="w-36 h-36 md:w-44 md:h-44 rounded-full mx-auto mb-6 border-4 border-white shadow-xl"
+                 alt="[Imagem de Juliana Costa - Soluções Digitais]" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-white shadow-xl"
                  onerror="this.onerror=null; this.src='https://placehold.co/150x150/E2E8F0/4A5568?text=JC';">
 
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-5 text-blue-900 leading-tight">Juliana Costa</h1>
-            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">Especialista em Estratégia Digital e Implementação de Soluções Tecnológicas para Negócios.</p>
-            <div class="space-x-4">
-                <a href="#servicos" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 font-semibold shadow-md">Ver Soluções</a>
-                <a href="#contato" class="bg-transparent border-2 border-blue-600 text-blue-700 px-8 py-3 rounded-full hover:bg-blue-50 transition duration-300 font-semibold">Fale Comigo</a>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-blue-900 leading-tight">Juliana Costa - Soluções Digitais</h1>
+            <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-8 md:mb-10 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto">Especialista em Estratégia Digital e Implementação de Soluções Tecnológicas para Negócios.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#servicos" class="w-full sm:w-auto bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 font-semibold shadow-md text-center">Ver Soluções</a>
+                <a href="#contato" class="w-full sm:w-auto bg-transparent border-2 border-blue-600 text-blue-700 px-8 py-3 rounded-full hover:bg-blue-50 transition duration-300 font-semibold text-center">Fale Comigo</a>
             </div>
         </section>
 
-        <section id="sobre" class="section-card">
-            <div class="grid md:grid-cols-5 gap-10 items-center">
-                <div class="md:col-span-2">
+        <section id="sobre" class="section-card mb-16 md:mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-10 items-center">
+                <div class="md:col-span-2 order-first md:order-none">
                      <img src="img/juliana.jpeg"
-                          alt="[Imagem ilustrativa sobre Juliana Costa e estratégia]"
-                          class="rounded-lg shadow-md w-full h-auto object-cover"
+                          alt="[Imagem ilustrativa sobre Juliana Costa e estratégia digital]" class="rounded-lg shadow-md w-full h-auto object-cover max-h-[500px] md:max-h-full"
                           onerror="this.onerror=null; this.src='https://placehold.co/600x700/E2E8F0/4A5568?text=Imagem+Indispon%C3%ADvel';">
                 </div>
                 <div class="md:col-span-3">
-                    <h2 class="text-3xl font-semibold mb-6 text-gray-800 border-l-4 border-purple-500 pl-4">Minha Jornada</h2>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-5 md:mb-6 text-gray-800 border-l-4 border-purple-500 pl-4">Minha Jornada</h2>
                     <p class="text-gray-600 leading-relaxed mb-4">
-                        Com mais de 8 anos dedicados ao universo digital, minha trajetória é marcada pela busca constante por inovação e resultados tangíveis. Sou Juliana Costa, e minha missão é atuar como parceira estratégica, ajudando empresas a navegar pela complexidade tecnológica e a transformar desafios em oportunidades de crescimento.
+                        Com mais de 8 anos dedicados ao universo digital, minha trajetória é marcada pela busca constante por inovação e resultados tangíveis. Sou Juliana Costa, especialista em <span class="font-semibold">soluções digitais</span>, e minha missão é atuar como parceira estratégica, ajudando empresas a navegar pela complexidade tecnológica e a transformar desafios em oportunidades de crescimento.
                     </p>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         Minha especialidade reside em compreender as necessidades únicas de cada negócio e traduzi-las em soluções digitais eficazes, desde a otimização de processos com ferramentas como a API do WhatsApp Business até a criação de presenças online impactantes.
                     </p>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-700">Minha Abordagem</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-gray-700">Minha Abordagem</h3>
                     <ul class="list-disc list-inside text-gray-600 space-y-2">
                         <li><span class="font-medium">Diagnóstico Profundo:</span> Análise detalhada do cenário atual e dos objetivos do cliente.</li>
                         <li><span class="font-medium">Soluções Personalizadas:</span> Desenvolvimento de estratégias e ferramentas sob medida.</li>
@@ -90,118 +103,163 @@
             </div>
         </section>
 
-        <section id="servicos" class="section-card bg-gradient-to-r from-blue-50 to-purple-50">
-            <h2 class="text-3xl font-semibold mb-10 text-gray-800 text-center">Como Posso Ajudar</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="service-card">
-                    <img src="https://placehold.co/80x80/C4B5FD/4338CA?text=Web" alt="[Ícone Desenvolvimento Web]" class="mx-auto mb-4 h-16 w-16" onerror="this.onerror=null; this.src='https://placehold.co/80x80/E2E8F0/4A5568?text=Web';">
-                    <h3 class="text-xl font-semibold mb-2 text-blue-800">Desenvolvimento Web Estratégico</h3>
+        <section id="servicos" class="section-card bg-gradient-to-r from-blue-50 to-purple-50 mb-16 md:mb-20">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-gray-800 text-center">Soluções Digitais Oferecidas</h2> <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                 <div class="service-card">
+                    <img src="https://placehold.co/80x80/C4B5FD/4338CA?text=Web" alt="[Ícone Desenvolvimento Web]" class="mx-auto mb-4 h-14 w-14 md:h-16 md:w-16" onerror="this.onerror=null; this.src='https://placehold.co/80x80/E2E8F0/4A5568?text=Web';">
+                    <h3 class="text-lg md:text-xl font-semibold mb-2 text-blue-800">Desenvolvimento Web Estratégico</h3>
                     <p class="text-gray-600 text-sm">Criação e otimização de sites e landing pages focados em performance, usabilidade e conversão.</p>
                 </div>
                 <div class="service-card">
-                     <img src="https://placehold.co/80x80/A5B4FC/4338CA?text=API" alt="[Ícone Integração API]" class="mx-auto mb-4 h-16 w-16" onerror="this.onerror=null; this.src='https://placehold.co/80x80/E2E8F0/4A5568?text=API';">
-                    <h3 class="text-xl font-semibold mb-2 text-blue-800">Consultoria e Integração API</h3>
+                     <img src="https://placehold.co/80x80/A5B4FC/4338CA?text=API" alt="[Ícone Integração API]" class="mx-auto mb-4 h-14 w-14 md:h-16 md:w-16" onerror="this.onerror=null; this.src='https://placehold.co/80x80/E2E8F0/4A5568?text=API';">
+                    <h3 class="text-lg md:text-xl font-semibold mb-2 text-blue-800">Consultoria e Integração API</h3>
                     <p class="text-gray-600 text-sm">Planejamento e implementação de integrações, incluindo WhatsApp Business API, para otimizar fluxos de comunicação.</p>
                 </div>
-                 <div class="service-card">
-                     <img src="https://placehold.co/80x80/818CF8/4338CA?text=Bot" alt="[Ícone Automação e Chatbots]" class="mx-auto mb-4 h-16 w-16" onerror="this.onerror=null; this.src='https://placehold.co/80x80/E2E8F0/4A5568?text=Bot';">
-                    <h3 class="text-xl font-semibold mb-2 text-blue-800">Automação e Chatbots Inteligentes</h3>
+                <div class="service-card">
+                     <img src="https://placehold.co/80x80/818CF8/4338CA?text=Bot" alt="[Ícone Automação e Chatbots]" class="mx-auto mb-4 h-14 w-14 md:h-16 md:w-16" onerror="this.onerror=null; this.src='https://placehold.co/80x80/E2E8F0/4A5568?text=Bot';">
+                    <h3 class="text-lg md:text-xl font-semibold mb-2 text-blue-800">Automação e Chatbots Inteligentes</h3>
                     <p class="text-gray-600 text-sm">Desenvolvimento de chatbots e automações para melhorar a eficiência do atendimento e o engajamento do cliente.</p>
                 </div>
             </div>
         </section>
 
-        <section id="projetos" class="section-card">
-            <h2 class="text-3xl font-semibold mb-10 text-gray-800 text-center">Projetos em Destaque</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <section id="projetos" class="section-card mb-16 md:mb-20">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-gray-800 text-center">Projetos em Destaque</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                 <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <img src="https://placehold.co/600x400/EDE9FE/5B21B6?text=Varejo+Conectado" alt="[Imagem do projeto Varejo Conectado]" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Projeto+1';">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-purple-700">Integração WhatsApp para "Varejo Conectado"</h3>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-purple-700">Integração WhatsApp para "Varejo Conectado"</h3>
                         <p class="text-gray-600 text-sm">Consultoria e implementação da API do WhatsApp Business para uma rede de lojas de eletrônicos, centralizando o atendimento pós-venda e suporte técnico. Resultado: Aumento de 40% na satisfação do cliente e redução de 25% no tempo médio de resolução.</p>
                     </div>
                 </div>
                 <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                      <img src="https://placehold.co/600x400/DBEAFE/1D4ED8?text=Sa%C3%BAde+Digital" alt="[Imagem do projeto Saúde Digital]" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Projeto+2';">
-                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-blue-700">Plataforma Web para "Clínica Saúde Digital"</h3>
+                     <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-blue-700">Plataforma Web para "Clínica Saúde Digital"</h3>
                         <p class="text-gray-600 text-sm">Desenvolvimento completo do novo portal web para uma clínica médica, com agendamento online integrado e área do paciente. Foco em design responsivo e experiência do usuário otimizada, resultando em um aumento de 60% nos agendamentos online.</p>
                     </div>
                 </div>
-                 <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                      <img src="https://placehold.co/600x400/D1FAE5/047857?text=EducaTech" alt="[Imagem do projeto EducaTech]" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Projeto+3';">
-                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-green-700">Chatbot de Suporte para "EducaTech Cursos"</h3>
+                     <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-green-700">Chatbot de Suporte para "EducaTech Cursos"</h3>
                         <p class="text-gray-600 text-sm">Criação de um chatbot inteligente para uma plataforma de cursos online, capaz de responder dúvidas frequentes sobre matrículas, pagamentos e acesso às aulas 24/7. Resultado: Redução de 50% nos tickets de suporte de primeiro nível.</p>
                     </div>
                 </div>
                  <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                      <img src="https://placehold.co/600x400/FEF3C7/B45309?text=Gastro+Hub" alt="[Imagem do projeto Gastro Hub]" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Projeto+4';">
-                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-yellow-700">Landing Page de Lançamento "Gastro Hub"</h3>
+                     <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-yellow-700">Landing Page de Lançamento "Gastro Hub"</h3>
                         <p class="text-gray-600 text-sm">Desenvolvimento de uma landing page de alta conversão para o lançamento de um novo aplicativo para restaurantes, com foco em captação de leads e demonstrações. Resultado: Taxa de conversão de 15% durante a campanha inicial.</p>
                     </div>
                 </div>
             </div>
-             <p class="mt-10 text-center text-gray-600">
+             <p class="mt-8 md:mt-10 text-center text-gray-600">
                 Estes são apenas alguns exemplos. Interessado em saber como posso ajudar o seu negócio especificamente? <a href="#contato" class="text-blue-600 hover:underline font-medium">Vamos conversar!</a>
             </p>
         </section>
 
-         <section id="depoimentos" class="section-card bg-gray-50">
-            <h2 class="text-3xl font-semibold mb-10 text-gray-800 text-center">Confiança e Resultados</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="testimonial-card">
+         <section id="depoimentos" class="section-card bg-gray-50 mb-16 md:mb-20">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-gray-800 text-center">Confiança e Resultados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+               <div class="testimonial-card">
                      <p class="text-gray-600 italic mb-4">"A expertise da Juliana em integração com o WhatsApp foi crucial para modernizar nosso atendimento. Profissionalismo e resultados acima da média."</p>
                     <div class="flex items-center mt-4">
-                        <img src="https://placehold.co/50x50/BEE3F8/2C5282?text=CM" alt="[Foto Carlos Mendes]" class="w-12 h-12 rounded-full mr-4 border-2 border-white shadow-sm" onerror="this.onerror=null; this.src='https://placehold.co/50x50/E2E8F0/4A5568?text=CM';">
+                        <img src="https://placehold.co/50x50/BEE3F8/2C5282?text=CM" alt="[Foto Carlos Mendes]" class="w-12 h-12 rounded-full mr-4 border-2 border-white shadow-sm flex-shrink-0" onerror="this.onerror=null; this.src='https://placehold.co/50x50/E2E8F0/4A5568?text=CM';">
                         <div>
                             <p class="font-semibold text-gray-800">- Carlos Mendes</p>
-                            <p class="text-sm text-gray-500">CEO, Varejo Conectado</p> </div>
+                            <p class="text-sm text-gray-500">CEO, Varejo Conectado</p>
+                        </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                      <p class="text-gray-600 italic mb-4">"Desde o planejamento até a entrega do novo portal, a Juliana demonstrou um comprometimento incrível. Estamos muito satisfeitos com a usabilidade e o design!"</p>
                      <div class="flex items-center mt-4">
-                        <img src="https://placehold.co/50x50/FEEBC8/975A16?text=AS" alt="[Foto Ana Beatriz Silva]" class="w-12 h-12 rounded-full mr-4 border-2 border-white shadow-sm" onerror="this.onerror=null; this.src='https://placehold.co/50x50/E2E8F0/4A5568?text=AS';">
+                        <img src="https://placehold.co/50x50/FEEBC8/975A16?text=AS" alt="[Foto Ana Beatriz Silva]" class="w-12 h-12 rounded-full mr-4 border-2 border-white shadow-sm flex-shrink-0" onerror="this.onerror=null; this.src='https://placehold.co/50x50/E2E8F0/4A5568?text=AS';">
                         <div>
                             <p class="font-semibold text-gray-800">- Ana Beatriz Silva</p>
-                            <p class="text-sm text-gray-500">Diretora Clínica, Clínica Saúde Digital</p> </div>
+                            <p class="text-sm text-gray-500">Diretora Clínica, Clínica Saúde Digital</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="mt-16 text-center bg-gradient-to-r from-blue-700 to-purple-800 text-white p-10 md:p-16 rounded-lg shadow-xl">
-             <h2 class="text-3xl md:text-4xl font-semibold mb-4">Pronto para Inovar?</h2>
-             <p class="mb-8 text-blue-100 max-w-xl mx-auto">Vamos conversar sobre seus desafios e como minhas soluções podem impulsionar seu negócio. Entre em contato hoje mesmo!</p>
-             <div class="flex flex-wrap justify-center gap-4">
-                 <a href="mailto:contato.julianacosta@etmnegociosdigitais.com" class="inline-flex items-center bg-white text-blue-700 px-6 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-medium shadow-sm">
-                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+        <section id="cta-contato" class="text-center bg-gradient-to-r from-blue-700 to-purple-800 text-white p-8 md:p-12 lg:p-16 rounded-lg shadow-xl mb-16 md:mb-20">
+             <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">Pronto para Inovar com Juliana Costa?</h2> <p class="mb-8 text-blue-100 max-w-xl mx-auto text-base md:text-lg">Vamos conversar sobre seus desafios e como minhas soluções digitais podem impulsionar seu negócio. Entre em contato hoje mesmo!</p>
+             <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4">
+                  <a href="mailto:contato.julianacosta@scalexcorporation.com.br" class="w-full sm:w-auto inline-flex items-center justify-center bg-white text-blue-700 px-6 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-medium shadow-sm">
+                     <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
                      Enviar Email
                  </a>
-                 <a href="https://wa.me/5587988660591" target="_blank" class="inline-flex items-center bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300 font-medium shadow-sm">
-                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M14.91 12.93a.997.997 0 00-.77-.37c-.21 0-.41.06-.59.19l-.81.54a10.1 10.1 0 01-4.8-4.8l.54-.81c.13-.18.19-.38.19-.59a.997.997 0 00-.37-.77l-1.06-1.06a1 1 0 00-1.41 0L4.5 6.06a1 1 0 000 1.41l.01.01c.17.17.3.38.38.6a8.07 8.07 0 003.59 3.59c.22.08.43.21.6.38l.01.01a1 1 0 001.41 0l1.59-1.59a1 1 0 000-1.41l-1.06-1.06zM10 18a8 8 0 100-16 8 8 0 000 16z"></path></svg>
+                 <a href="https://wa.me/5573999121076" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300 font-medium shadow-sm">
+                     <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M14.91 12.93a.997.997 0 00-.77-.37c-.21 0-.41.06-.59.19l-.81.54a10.1 10.1 0 01-4.8-4.8l.54-.81c.13-.18.19-.38.19-.59a.997.997 0 00-.37-.77l-1.06-1.06a1 1 0 00-1.41 0L4.5 6.06a1 1 0 000 1.41l.01.01c.17.17.3.38.38.6a8.07 8.07 0 003.59 3.59c.22.08.43.21.6.38l.01.01a1 1 0 001.41 0l1.59-1.59a1 1 0 000-1.41l-1.06-1.06zM10 18a8 8 0 100-16 8 8 0 000 16z"></path></svg>
                      Falar no WhatsApp
                  </a>
-                 <a href="tel:+5587988660591" class="inline-flex items-center bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 transition duration-300 font-medium shadow-sm">
-                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                     Ligar <span class="hidden sm:inline ml-1">(+55 (87) 8866-0591)</span> </a>
+                  <a href="tel:+5573999121076" class="w-full sm:w-auto inline-flex items-center justify-center bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 transition duration-300 font-medium shadow-sm">
+                     <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                     Ligar <span class="hidden sm:inline ml-1">(+55 73999121076)</span>
+                 </a>
              </div>
-             <p class="text-xs mt-8 text-blue-200">Ou envie um email para: contato.julianacosta@etmnegociosdigitais.com</p>
+             <p class="text-xs mt-8 text-blue-200">Ou envie um email para: contato.julianacosta@scalexcorporation.com.br</p>
         </section>
 
+        <section id="contato" class="section-card mb-16 md:mb-20">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-gray-800 text-center">Entre em Contato com Juliana Costa</h2> <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div class="space-y-6">
+                     <div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                            Email
+                        </h3>
+                        <a href="mailto:contato.julianacosta@scalexcorporation.com.br" class="text-blue-600 hover:underline break-words">contato.julianacosta@scalexcorporation.com.br</a>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2 flex items-center">
+                           <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M14.91 12.93a.997.997 0 00-.77-.37c-.21 0-.41.06-.59.19l-.81.54a10.1 10.1 0 01-4.8-4.8l.54-.81c.13-.18.19-.38.19-.59a.997.997 0 00-.37-.77l-1.06-1.06a1 1 0 00-1.41 0L4.5 6.06a1 1 0 000 1.41l.01.01c.17.17.3.38.38.6a8.07 8.07 0 003.59 3.59c.22.08.43.21.6.38l.01.01a1 1 0 001.41 0l1.59-1.59a1 1 0 000-1.41l-1.06-1.06zM10 18a8 8 0 100-16 8 8 0 000 16z"></path></svg>
+                            WhatsApp
+                        </h3>
+                        <a href="https://wa.me/5573999121076" target="_blank" class="text-green-600 hover:underline">+5573999121076</a> </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2 flex items-center">
+                           <svg class="w-5 h-5 mr-2 text-gray-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                            Telefone
+                        </h3>
+                        <a href="tel:+5573999121076" class="text-gray-600 hover:underline">+5573999121076</a> </div>
+                     <div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-purple-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                            Endereço
+                        </h3>
+                        <p class="text-gray-600">
+                            Avenida Esmeralda - de 100/101 Ao Fim, 364<br>
+                            Santa Isabel - Eunápolis - Bahia<br>
+                            CEP: 45828-567<br>
+                            Brasil
+                            </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-200 rounded-lg flex items-center justify-center h-64 md:h-full">
+                    <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Mapa+ou+Imagem+Local"
+                         alt="[Mapa da localização ou imagem]"
+                         class="w-full h-full object-cover rounded-lg"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Localiza%C3%A7%C3%A3o';">
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-gray-900 text-gray-400 mt-12 py-10 text-sm">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h4 class="font-semibold text-white mb-3">Juliana Costa</h4>
+    <footer class="bg-gray-900 text-gray-400 py-10 md:py-12 text-sm">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
+                 <div class="md:col-span-1">
+                    <h4 class="font-semibold text-white mb-3 text-base">Juliana Costa - Soluções Digitais</h4>
                     <p class="leading-relaxed">Especialista em soluções digitais, ajudando negócios a prosperar na era tecnológica com estratégias personalizadas.</p>
                 </div>
-                <div>
-                    <h4 class="font-semibold text-white mb-3">Navegação</h4>
+                <div class="md:col-span-1">
+                    <h4 class="font-semibold text-white mb-3 text-base">Navegação</h4>
                     <ul class="space-y-2">
                         <li><a href="#sobre" class="hover:text-white hover:underline">Sobre Mim</a></li>
                         <li><a href="#servicos" class="hover:text-white hover:underline">Soluções</a></li>
@@ -210,18 +268,29 @@
                         <li><a href="#contato" class="hover:text-white hover:underline">Contato</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="font-semibold text-white mb-3">Contato & Legal</h4>
-                    <p class="mb-2">Email: <a href="mailto:contato.julianacosta@etmnegociosdigitais.com" class="hover:text-white hover:underline">contato.julianacosta@etmnegociosdigitais.com</a></p>
-                    <p class="mb-2">Telefone: <a href="tel:+5587988660591" class="hover:text-white hover:underline">+55 (87) 8866-0591</a></p> <p class="mb-4">WhatsApp: <a href="https://wa.me/5587988660591" target="_blank" class="hover:text-white hover:underline">+55 (87) 8866-0591</a></p> <a href="politicas.html" class="hover:text-white underline block">Política de Privacidade</a> </div>
+                <div class="md:col-span-1">
+                    <h4 class="font-semibold text-white mb-3 text-base">Contato</h4>
+                    <p class="mb-2 break-words">Email: <a href="mailto:contato.julianacosta@scalexcorporation.com.br" class="hover:text-white hover:underline">contato.julianacosta@scalexcorporation.com.br</a></p>
+                    <p class="mb-2">Telefone: <a href="tel:+5573999121076" class="hover:text-white hover:underline">+5573999121076</a></p>
+                    <p class="mb-2">WhatsApp: <a href="https://wa.me/5573999121076" target="_blank" class="hover:text-white hover:underline">+5573999121076</a></p>
+                </div>
+                 <div class="md:col-span-1">
+                    <h4 class="font-semibold text-white mb-3 text-base">Endereço & Legal</h4>
+                    <p class="mb-4">
+                        Avenida Esmeralda - de 100/101 Ao Fim, 364<br>
+                        Santa Isabel - Eunápolis - Bahia<br>
+                        CEP: 45828-567
+                        </p>
+                    <a href="/politica-de-privacidade" class="hover:text-white underline block">Política de Privacidade</a>
+                </div>
             </div>
 
             <div class="divider border-gray-700"></div>
 
             <div class="text-center mt-8">
                 <p class="text-xs mb-2">
-                    Gerenciado por: <span class="font-medium text-gray-300">ETM NEGOCIOS DIGITAIS LTDA</span> - CNPJ: <span class="font-medium text-gray-300">45.977.062/0001-96</span> </p>
-                <p class="text-xs">&copy; <span id="current-year"></span> Juliana Costa - Soluções Digitais. Todos os direitos reservados.</p>
+                    Gerenciado por: <span class="font-medium text-gray-300">49.819.570 Celio Maximiano dos Santos</span> - CNPJ: <span class="font-medium text-gray-300">49819570000105</span> </p>
+                 <p class="text-xs">&copy; <span id="current-year"></span> Juliana Costa - Soluções Digitais. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -230,14 +299,25 @@
         // Atualiza o ano no rodapé
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Simples funcionalidade para menu mobile (exemplo básico)
-        // Considere uma biblioteca JS para menus mais robustos
-        // const mobileMenuButton = document.querySelector('.md\\:hidden button');
-        // const mobileMenu = document.querySelector('.md\\:hidden + div'); // Ajuste o seletor se necessário
-        // mobileMenuButton.addEventListener('click', () => {
-        //      mobileMenu.classList.toggle('hidden'); // Ou sua lógica de exibição
-        // });
+        // Funcionalidade básica para menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+             mobileMenu.classList.toggle('mobile-menu-hidden');
+             mobileMenu.classList.toggle('block');
+        });
+
+        // Opcional: Fechar o menu ao clicar em um link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('mobile-menu-hidden');
+                mobileMenu.classList.remove('block');
+            });
+        });
     </script>
 
 </body>
 </html>
+
