@@ -1,0 +1,222 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #101828; background: #fff; }
+img { max-width: 100%; display: block; border-radius: 12px; }
+a { color: #0b74e5; text-decoration: none; }
+.container { width: min(1100px, 92%); margin: 0 auto; }
+
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.9); backdrop-filter: blur(8px); border-bottom: 1px solid #eef2f6; }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.nav { display: flex; gap: 18px; }
+.nav a { color: #344054; font-weight: 500; }
+.mobile-menu-btn { display: none; background: none; border: none; font-size: 24px; cursor: pointer; }
+.mobile-nav { display: none; position: fixed; top: 70px; left: 0; right: 0; background: white; border-bottom: 1px solid #eef2f6; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 99; }
+.mobile-nav a { display: block; padding: 10px 20px; color: #344054; font-weight: 500; border-bottom: 1px solid #f2f4f7; }
+
+.hero { padding: 56px 0; background: linear-gradient(180deg, #f8fafc 0, #fff 100%); }
+.hero .container { display: grid; gap: 32px; grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+.hero h1 { font-size: clamp(28px, 3vw, 40px); margin: 0 0 12px; line-height: 1.1; }
+.hero p { color: #475467; margin: 0 0 16px; }
+.hero-cta { display: flex; gap: 12px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 16px; border-radius: 10px; font-weight: 600; border: 1px solid #d0d5dd; color: #0b74e5; text-decoration: none; transition: all 0.3s ease; }
+.btn.primary { background: #0b74e5; color: #fff; border-color: #0b74e5; box-shadow: 0 4px 6px rgba(11, 116, 229, 0.2); }
+.btn.primary:hover { background: #0965d3; transform: translateY(-2px); box-shadow: 0 6px 12px rgba(11, 116, 229, 0.3); }
+.btn.outline { background: #fff; }
+.btn.outline:hover { background: #0b74e5; color: #fff; }
+
+.sobre, .servicos, .galeria, .avaliacoes { padding: 64px 0; }
+.sobre .container { display: grid; gap: 28px; grid-template-columns: 0.9fr 1.1fr; align-items: center; }
+.sobre h2, .servicos h2, .galeria h2, .avaliacoes h2 { font-size: 28px; margin: 0 0 16px; }
+.sobre p { color: #475467; }
+.kpis { display: flex; gap: 18px; margin-top: 16px; }
+.kpi { background: #f2f4f7; padding: 12px 14px; border-radius: 10px; display: grid; }
+.kpi strong { font-size: 22px; }
+.kpi span { color: #475467; font-size: 14px; }
+
+.servicos .servicos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
+.card { border: 1px solid #eef2f6; border-radius: 12px; padding: 14px; box-shadow: 0 1px 0 rgba(16,24,40,.04); }
+.card h3 { margin: 10px 0 6px; font-size: 18px; }
+.card p { color: #475467; }
+
+.galeria-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
+
+.depoimentos { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+blockquote { border-left: 4px solid #0b74e5; padding: 10px 14px; background: #f8fafc; border-radius: 8px; margin: 0; }
+blockquote footer { color: #475467; font-size: 14px; margin-top: 8px; }
+
+.site-footer { border-top: 1px solid #eef2f6; margin-top: 40px; }
+.site-footer .container { display: grid; gap: 18px; grid-template-columns: 1fr 1fr 1fr; padding: 24px 0; }
+.footer-brand { display: flex; flex-direction: column; gap: 4px; }
+.footer-brand strong { font-size: 18px; }
+.footer-brand small { color: #475467; font-size: 14px; }
+.footer-links { display: grid; gap: 8px; }
+.footer-contact p { margin: 0; color: #475467; }
+.legal-line { background: #f8fafc; border-top: 1px solid #eef2f6; }
+.legal-line p { margin: 0; padding: 12px 0; text-align: center; color: #475467; font-size: 14px; }
+
+/* Seção de Preços */
+.precos { padding: 64px 0; background: #f8fafc; }
+.precos h2 { text-align: center; margin-bottom: 16px; }
+.precos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 48px; }
+.preco-card { background: white; padding: 32px 24px; border-radius: 16px; text-align: center; border: 2px solid #e5e7eb; position: relative; transition: all 0.3s ease; }
+.preco-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+.preco-card.destaque { border-color: #0b74e5; background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%); }
+.badge { background: #0b74e5; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; position: absolute; top: -8px; left: 50%; transform: translateX(-50%); }
+.preco { margin: 16px 0 24px; }
+.valor { font-size: 32px; font-weight: 700; color: #0b74e5; }
+.periodo { color: #6b7280; font-size: 16px; }
+.beneficios { list-style: none; padding: 0; margin: 24px 0; }
+.beneficios li { padding: 8px 0; color: #374151; text-align: left; }
+.preco-card .btn { width: 100%; margin-top: 16px; }
+
+/* Garantias */
+.garantias { margin-top: 48px; }
+.garantias h3 { text-align: center; margin-bottom: 32px; color: #0b74e5; }
+.garantias-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.garantia { text-align: center; padding: 24px; background: white; border-radius: 12px; }
+.garantia-icon { font-size: 32px; margin-bottom: 12px; }
+.garantia h4 { margin: 8px 0; color: #1f2937; }
+.garantia p { color: #6b7280; font-size: 14px; }
+
+/* FAQ */
+.faq { padding: 64px 0; }
+.faq h2 { text-align: center; margin-bottom: 16px; }
+.faq-grid { display: grid; gap: 20px; max-width: 800px; margin: 0 auto; }
+.faq-item { background: white; padding: 24px; border-radius: 12px; border: 1px solid #e5e7eb; }
+.faq-item h4 { margin: 0 0 12px; color: #1f2937; font-size: 16px; }
+.faq-item p { margin: 0; color: #6b7280; line-height: 1.6; }
+
+/* Cookie banner responsive */
+/* Melhorias responsivas para preços */
+@media (max-width: 480px) {
+  .preco-card {
+    padding: 20px 12px;
+  }
+  
+  .valor {
+    font-size: 24px;
+  }
+  
+  .beneficios {
+    font-size: 14px;
+  }
+  
+  .garantia-icon {
+    font-size: 24px;
+  }
+  
+  .faq-item h4 {
+    font-size: 14px;
+  }
+  
+  .faq-item p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero .container, .sobre .container { grid-template-columns: 1fr; }
+  .servicos .servicos-grid { grid-template-columns: 1fr 1fr; }
+  .galeria-grid { grid-template-columns: 1fr 1fr; }
+  .depoimentos { grid-template-columns: 1fr; }
+  .site-footer .container { grid-template-columns: 1fr; }
+  .nav { gap: 12px; }
+  .precos-grid { grid-template-columns: 1fr; }
+  .garantias-grid { grid-template-columns: repeat(2, 1fr); }
+  .precos, .faq { padding: 48px 0; }
+}
+
+/* CONSOLIDADO - Todos os estilos para max-width: 600px */
+@media (max-width: 600px) {
+  /* Index page styles */
+  .hero { padding: 32px 0; }
+  .sobre, .servicos, .galeria, .avaliacoes, .precos, .faq { padding: 40px 0; }
+  .servicos .servicos-grid { grid-template-columns: 1fr; }
+  .galeria-grid { grid-template-columns: 1fr; }
+  .hero-cta { flex-direction: column; }
+  .kpis { flex-direction: column; gap: 12px; }
+  .btn { padding: 14px 20px; }
+  .nav { display: none; }
+  .mobile-menu-btn { display: block; }
+  .brand { font-size: 16px; }
+  .site-header .container { padding: 12px 0; }
+  .garantias-grid { grid-template-columns: 1fr; }
+  .valor { font-size: 28px; }
+  .preco-card { padding: 24px 16px; }
+  .faq-item { padding: 16px; }
+  .garantia { padding: 16px; }
+  
+  /* Cookie banner */
+  #cookieConsent .container {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  #cookieConsent .btn {
+    margin-top: 12px !important;
+    width: 100%;
+  }
+  
+  /* Páginas legais */
+  main.container {
+    padding: 20px 0 !important;
+  }
+  main.container h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  main.container h2 {
+    font-size: 18px;
+    margin: 24px 0 12px;
+  }
+  main.container p, main.container li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  main.container ul, main.container ol {
+    padding-left: 20px;
+  }
+  
+  /* Formulário de contato */
+  form.card {
+    padding: 16px !important;
+    margin: 0 -16px;
+  }
+  form.card label {
+    font-size: 14px;
+  }
+  form.card input, form.card textarea {
+    padding: 12px !important;
+    font-size: 16px; /* Previne zoom no iOS */
+  }
+  form.card label span {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+/* CONSOLIDADO - Todos os estilos para max-width: 400px */
+@media (max-width: 400px) {
+  /* Index page styles */
+  .container { width: 95%; }
+  .hero h1 { font-size: 24px; }
+  .card { padding: 12px; }
+  
+  /* Páginas legais */
+  main.container {
+    padding: 16px 0 !important;
+  }
+  main.container h1 {
+    font-size: 22px;
+  }
+  main.container h2 {
+    font-size: 16px;
+  }
+  
+  /* Formulário de contato */
+  form.card {
+    padding: 12px !important;
+  }
+  form.card input, form.card textarea {
+    padding: 10px !important;
+  }
+}
