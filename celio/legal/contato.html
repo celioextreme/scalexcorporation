@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato — Jeoacas Pereira</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand"><a href="../index.html">← Voltar</a></div>
+      <nav class="nav">
+        <a href="../index.html#sobre">Sobre</a>
+        <a href="../index.html#servicos">Serviços</a>
+        <a href="../index.html#precos">Preços</a>
+        <a href="../index.html#faq">FAQ</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="../index.html#sobre">Sobre</a>
+      <a href="../index.html#servicos">Serviços</a>
+      <a href="../index.html#precos">Preços</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+  
+  <main class="container" style="padding:40px 0">
+    <h1>Contato</h1>
+    <p>Preencha os campos abaixo e retornaremos o contato.</p>
+    
+    <form class="card" style="display:grid; gap:16px; padding:24px; max-width:600px;">
+      <label style="display:grid; gap:6px;">
+        <span>Nome *</span>
+        <input type="text" name="nome" required placeholder="Seu nome completo" style="width:100%; padding:12px; border:1px solid #d0d5dd; border-radius:8px; font-size:16px;">
+      </label>
+      
+      <label style="display:grid; gap:6px;">
+        <span>E-mail *</span>
+        <input type="email" name="email" required placeholder="seu@email.com" style="width:100%; padding:12px; border:1px solid #d0d5dd; border-radius:8px; font-size:16px;">
+      </label>
+      
+      <label style="display:grid; gap:6px;">
+        <span>Telefone *</span>
+        <input type="tel" name="telefone" required placeholder="(11) 99999-9999" style="width:100%; padding:12px; border:1px solid #d0d5dd; border-radius:8px; font-size:16px;">
+      </label>
+      
+      <label style="display:grid; gap:6px;">
+        <span>WhatsApp (opcional)</span>
+        <input type="tel" name="whatsapp" placeholder="(11) 99999-9999" style="width:100%; padding:12px; border:1px solid #d0d5dd; border-radius:8px; font-size:16px;">
+      </label>
+      
+      <label style="display:grid; gap:6px;">
+        <span>Mensagem</span>
+        <textarea name="mensagem" rows="4" placeholder="Descreva como podemos ajudar você..." style="width:100%; padding:12px; border:1px solid #d0d5dd; border-radius:8px; font-size:16px; resize:vertical;"></textarea>
+      </label>
+      
+      <label style="display:flex; gap:10px; align-items:flex-start; margin-top:8px;">
+        <input type="checkbox" name="optin_whatsapp" value="1" style="margin-top:2px;">
+        <span style="font-size:14px; line-height:1.5;">Autorizo <strong>Jeoacas Pereira</strong> a me enviar mensagens via WhatsApp sobre: orçamentos, atualizações de serviços, materiais educativos e comunicações comerciais relacionadas à consultoria empresarial. Frequência: conforme necessário para os serviços contratados. Posso revogar a qualquer momento respondendo "SAIR" ou pelos canais de contato. Mais detalhes nos <a href="termos.html" target="_blank" rel="noopener">Termos de Uso</a> e <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</span>
+      </label>
+      
+      <button type="submit" class="btn primary" style="width:fit-content; margin-top:12px;">Enviar Mensagem</button>
+    </form>
+
+    <section style="margin-top:32px">
+      <h2>Outros canais</h2>
+      <div style="display:grid; gap:12px;">
+        <p><strong>Razão Social:</strong> Jeoacas Pereira</p>
+        <p><strong>Telefone:</strong> (73) 99912-1076</p>
+        <p><strong>E-mail:</strong> contato@scalexcorporation.com.br</p>
+        <p><strong>Endereço:</strong> Avenida Esmeralda - de 100/101 Ao Fim, 364 — Santa Isabel — Eunápolis/BA — CEP 45828-567</p>
+        <p><strong>CNPJ:</strong> 49.819.570/0001-05</p>
+        <p>
+          <strong>Redes sociais:</strong> 
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a> •
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> •
+          <a href="https://x.com/" target="_blank" rel="noopener">Twitter/X</a> •
+          <a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+        </p>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">
+        <strong>Jeoacas Pereira</strong>
+        <div><small>Jeoacas Pereira</small></div>
+      </div>
+      <div class="footer-links">
+        <a href="termos.html">Termos de Uso</a>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <address class="footer-contact">
+        <p>Telefone: (73) 99912-1076</p>
+        <p>E-mail: contato@scalexcorporation.com.br</p>
+        <p>Endereço: Avenida Esmeralda - de 100/101 Ao Fim, 364 — Santa Isabel — Eunápolis/BA — CEP 45828-567</p>
+        <p>CNPJ: 49.819.570/0001-05</p>
+      </address>
+    </div>
+    <div class="legal-line">
+      <div class="container">
+        <p>© 2025 Jeoacas Pereira — Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    document.querySelector('form')?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      alert('Recebemos sua solicitação. Entraremos em contato em breve.');
+      e.target.reset();
+    });
+    
+    // Função para toggle do menu mobile
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      if (mobileNav) {
+        mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
+      }
+    }
+    
+    // Fechar menu mobile ao clicar em link
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileNav) {
+          mobileNav.style.display = 'none';
+        }
+      });
+    });
+    
+    // Fechar menu mobile ao redimensionar tela
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 600) {
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileNav) {
+          mobileNav.style.display = 'none';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
